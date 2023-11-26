@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Roboto', sans-serif;
+}
+
+html, body{
+   width: 100%;
+   height: 100%;
+}
+img{
+    width: 100%;
+}
+.instaScreen i{
+    cursor: pointer;
+}
+main{
+    width: 100%;
+    height: 100%;
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#loader{
+    width: 100%;
+    height: 100%;
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+    position: absolute;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#loader h1{
+    font-size: 50px;
+    color: #fff;
+    font-weight: 400;
+    font-family: 'Lobster', sans-serif;
+    line-height: 48px;
+}
+.mobile{
+    width: 260px;
+    height: 480px;
+    background-color: aliceblue;
+    border: 6px ridge #000;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+.instaScreen{
+    height: calc(450px - 25px);
+}
+.mobileTopbar{
+    background-color: #fff;
+    height: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px 5px 20px;
+    position: relative;
+    z-index: 9;
+
+}
+.mobileTopbar i{
+    color: #000000;
+    font-size: 12px;
+}
+.topBarTime{
+    font-size: 13px;
+    font-weight: 600;
+    color: #000000;
+}
+.frontCamera {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 9;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    background: #000;
+    padding: 9px 35px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.camera{
+    width: 7px;
+    background-color: #474747;
+    height: 7px;
+    border-radius: 50%;
+}
+.speaker{
+    width: 35px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #474747;
+}
+.instaHeader{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px 0px;
+    background-color: #fff;
+    align-items: center;
+    height: 37px;
+    box-shadow: 0px 0px 5px 0px #00000070;
+}
+.headerRight i{
+    margin-right: 5px;
+}
+.instaBody{
+    height: 84%;
+    background-color: #fff;
+    overflow-y: auto;
+}
+.instaBody::-webkit-scrollbar{
+    display: none;
+}
+.instaFooter {
+    background-color: #fff;
+    height: 50px;
+    box-shadow: 0px 0px 5px 0px #00000070;
+}
+.footerIcons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+}
+.footerIcons i {
+    font-size: 20px;
+}
+.footerUserImg{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+}
+.footerLine{
+    text-align: center;
+    padding-bottom: 5px;
+}
+.footerLine span{
+    width: 80px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: #222;
+    display: inline-block;
+}
+.storiesBar{
+    background-color: #fff;
+    padding: 5px 0px 5px 10px;
+    display: flex;
+    border-bottom: 1px solid #f7f7f7;
+}
+.userStory{
+    position: relative;
+}
+.story{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column ;
+    gap: 3px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.profileImage{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+}
+.storyUserName{
+    font-size: 8px;
+    font-weight: 600;
+}
+.storiesBar{
+    overflow-x: auto;
+}
+.storiesBar::-webkit-scrollbar{
+    display: none;
+}
+.otherStories {
+    display: flex;
+}
+.otherStories .story img{
+    padding: 2px;
+    border: 1px solid rgb(255, 54, 54);
+}
+.addStoryIcon {
+    color: rgb(0, 124, 173);
+    position: absolute;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    left: 30px;
+    background: #fff;
+    top: 29px;
+    font-size: 14px;
+}
+
+.postHeader{
+    height: 30px;
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 8px 5px 5px;
+}
+.postHeadLeft{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.postHeadLeft img{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+}
+.postHeadLeft h6{
+    font-size: 10px;
+}
+.postBody{
+    height: 69%;
+    width: 100%;
+    background-color: antiquewhite;
+    position: relative;
+}
+.postBody i{
+    color: #fff;
+    font-size: 70px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    opacity: 0;
+    transition: transform ease .5s;
+}
+.postBody img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.postFooter{
+    width: 100%;
+    height: 60px;
+    /* background-color: salmon; */
+    padding: 5px 8px 5px 5px;
+}
+.instaFeeds {
+    height: 100%;
+    width: 100%;
+}
+.post {
+    height: 81%;
+    width: 100%;
+    margin-bottom: 2px;
+}
+.topPart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.topPartLeft i{
+    margin-right: 3px;
+}
+.likedProfiles{
+    display: flex;
+}
+.middlePart{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
+}
+.likedProfiles img{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.likedProfiles img:not(:nth-child(1)){
+    margin-left: -3px;
+}
+.likednames{
+    font-size: 10px;
+}
+.bottomPart{
+    color: #949494;
+    margin-top: 5px;
+    font-size: 7px;
+    font-weight: 300;
+}
+#fullScreenStory{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    background-size: cover;
+    background-position: center;
+    z-index: 8;
+}
